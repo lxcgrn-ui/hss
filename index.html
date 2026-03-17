@@ -2,58 +2,15 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <style>
-        /* 基礎設置：深色背景營造高科技感 */
-        body { 
-            margin: 0; height: 100vh; background-color: #050505; 
-            display: flex; justify-content: center; align-items: center; 
-            color: #00ffcc; font-family: 'Courier New', monospace;
-        }
-
-        /* 暈光與微晃動容器 */
-        .container { 
-            padding: 40px; border: 1px solid #00ffcc; 
-            box-shadow: 0 0 20px rgba(0, 255, 204, 0.3); /* 暈光效果 */
-            background: rgba(0, 20, 20, 0.8);
-            animation: vibrate 0.1s infinite alternate; /* 微晃動效果 */
-        }
-
-        @keyframes vibrate {
-            from { transform: translateX(-0.5px); }
-            to { transform: translateX(0.5px); }
-        }
-
-        input { 
-            background: #111; border: 1px solid #00ffcc; color: #00ffcc; 
-            padding: 10px; width: 200px; outline: none;
-        }
-
-        button { 
-            padding: 10px 20px; background: transparent; color: #00ffcc; 
-            border: 1px solid #00ffcc; cursor: pointer; transition: 0.3s;
-        }
-
-        button:hover { background: #00ffcc; color: #000; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM TERMINATED</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="container">
-    <h3>SYSTEM_ACCESS_KEY</h3>
-    <input type="text" id="keyInput" placeholder="ENTER KEY...">
-    <button onclick="checkKey()">EXECUTE</button>
-</div>
-
-<script>
-    function checkKey() {
-        const key = document.getElementById('keyInput').value;
-        if (key === 'hss') {
-            window.location.href = 'https://gofile.io/d/NMeaME';
-        } else {
-            alert('ACCESS DENIED');
-        }
-    }
-</script>
-
+    <div class="overlay"></div>
+    <div class="main-container">
+        <button class="stop-btn">停止更新</button>
+        <div class="system-msg">DATABASE ACCESS DENIED / SYSTEM HALTED</div>
+    </div>
 </body>
 </html>
